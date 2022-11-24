@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main_section {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.cards_section {
+    height: 400px;
+    width: 500px;
+    border: rgb(63, 63, 63) 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    border: 1px dotted white;
+    padding: 50px;
+    
+}
+
+.big_cards {
+    position: relative;
+}
+
+.big_card {
+    background: rgba(50, 50, 50, 0.635);
+    height: 300px;
+    aspect-ratio: 5/7;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 800ms cubic-bezier(.09,.67,.21,.98);
+    object-fit:cover;
+    z-index: 1;
+
+}
+.btn_section{
+    display: flex;
+    justify-content: space-evenly;
+    width:400px
+}
+.btn{
+    height :30px ;
+    width:30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    
+}
+.like_btn{
+    border: 1px solid #00ff73;
+    color:#00ff73;
+    background: #000;
+
+}
+.dislike_btn{
+    border: 1px solid #ff4a4a;
+    color: #ff4a4a;
+    
+    
+}
+.small_card{
+    background: rgba(232, 232, 232, 0.253);
+    height: 100px;
+    aspect-ratio: 5/7;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 800ms cubic-bezier(.09,.67,.21,.98);
+    object-fit: cover;
+    
+}
+.big_cards >*{
+    box-shadow: rgb(0 0 0 / 32%) 5px 14px 27px 22px;
+}
+
+.indicator{
+    z-index: 2;
+    position:absolute;
+    transition:100ms ease ;
+    
+}
+.indicatorLike{
+    color:rgba(255, 192, 203, 0.797);
+    
+    
+}
+.indicatorDislike{
+    color:rgba(30, 143, 255, 0.79);
+   
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:column;
+}
+
+
+/* applying hover animation to big cards*/
+
+.cards_section:hover .big_card:nth-child(1){
+       transform: translate(-20%,-50%) rotate(20deg);
+}
+
+
+.cards_section:hover .big_card:nth-child(2){
+    transform: translate(-40%,-60%) rotate(10deg);
+
+
+}
+.cards_section:hover .big_card:nth-child(3){
+          
+    transform: translate(-70%,-60%) rotate(-10deg);
+
+}
+.cards_section:hover .big_card:nth-child(4){
+           
+    transform: translate(-80%,-50%) rotate(-20deg);
+
+}
+
+
+/* appying hover aniation to small cards */
+
+.cards_section:hover .small_card:nth-child(1){
+    transform: translate(-350%,-250%) rotate(-20deg);
+}
+.cards_section:hover .small_card:nth-child(2){
+    transform: translate(320%,-150%)rotate(30deg);
+
+}
+.cards_section:hover .small_card:nth-child(3){
+    transform: translate(-400%,-10%)rotate(-40deg);
+
+}
+
+.cards_section:hover .small_card:nth-child(4){
+    transform: translate(350%,100%)rotate(20deg);
+
+}
+/* indicator animation  */
+
+@keyframes indicatorAnimetion {
+    0%{
+        font-size: 1rem;
+
+    }100%{
+        font-size:3rem
+    }
+}
+
+
+
